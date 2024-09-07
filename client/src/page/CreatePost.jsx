@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { FaLinkedin } from 'react-icons/fa'; 
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
@@ -80,8 +80,8 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
+        <h1 className="font-extrabold text-[#222328] text-[32px]">Create Sports Art</h1>
+        <p className="mt-2 text-[#666e75] text-[20px] max-w-[500px]">Generate an imaginative Sports Art Image through DALL-E AI and share it with the community</p>
       </div>
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
@@ -99,7 +99,7 @@ const CreatePost = () => {
             labelName="Prompt"
             type="text"
             name="prompt"
-            placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
+            placeholder="M"
             value={form.prompt}
             handleChange={handleChange}
             isSurpriseMe
@@ -140,7 +140,7 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
+          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the sports community **</p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
@@ -149,6 +149,18 @@ const CreatePost = () => {
           </button>
         </div>
       </form>
+      <div className="text-center mt-16 py-8">
+        <p>Made with ❤️ by Lakshaya Sabharwal</p>
+        <p>For feedback contact:</p>
+        <a
+          href="https://www.linkedin.com/in/lakshaya-sabharwal-6b7939263"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-2"
+        >
+          <FaLinkedin size={40} color="#0A66C2" />
+        </a>
+      </div>
     </section>
   );
 };
